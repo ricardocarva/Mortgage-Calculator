@@ -16,9 +16,7 @@ The magic of loan arithmetic is to have the borrower pay a fixed monthly amount 
 
 ```P = L * m_rate * (1+m_rate)^months / [ ((1+m_rate)^months) - 1 ]```
 
-Plugging the numbers of our example gives a monthly payment amount of $1,109.53. In the first month, we already computed that the interest payment is $495. The remaining ($1,109.53 - $495) = $614.53 
-
-- 2 - applies to the loan capital. After this payment is made, the borrower owes the bank ($150,000 - $614.53) = $149,385.47.
+Plugging the numbers of our example gives a monthly payment amount of $1,109.53. In the first month, we already computed that the interest payment is $495. The remaining ($1,109.53 - $495) = $614.53 applies to the loan capital. After this payment is made, the borrower owes the bank ($150,000 - $614.53) = $149,385.47.
 
 At a later time, let’s say the borrower still owes $100,000. We computed above that the interest would be $330. Accordingly, in that month, an amount of ($1,109.53 - $330) = $779.53 is applied to the loan capital. Moving forward, the borrower owes $100,000 - $779.53 = $99,220.47. 
 
@@ -33,12 +31,10 @@ Write a function that takes the loan terms as input and prints the monthly payme
 
 Output #2 (Amortized Schedule)
 The amortized schedule shows the amounts that go towards interest and principal for each month. Write a function that takes the loan terms as parameters and prints the amortized schedule. The function header and a sample output are shown below. The rightmost two columns (INTEREST, PRINCIPAL) are cumulative figures and show the total interest and principal paid to date. Like the sample below, print the year number only for the first month of the year and print the header again for each year. The format should be easy to read (i.e., right align the numbers and the text).
+
 ```void output_amortized(double loan_amount, double interest_rate, double term_years); ```
 
-- 3 -
  ![Amortization.png](Amortization.png)
-
-
 
 Output #3 (Early Payments: monthly)
 The loan terms usually allow the borrower to make early payments towards the capital. This allows the loan to be paid off earlier and reduces the total amount of interest paid. Let’s say, for our example loan, the remaining capital is $50,000. In this month, the borrower makes the monthly payment of $1,109.53 and, on top of that, makes an extra payment of $1,000 towards the capital.
@@ -47,10 +43,10 @@ Let’s do the math. The bank first charges 0.33% interest on the outstanding ca
 On top of that, the borrower contributes $1,000 towards the capital, for a total of $1,944.53. Moving forward, the capital amount remaining is $50,000 - $1,944.53 = $48,055.47. Note that the interest is charged on the capital before subtracting the extra capital amount. By applying early payments, the capital amount is reduced at a faster pace and, therefore, the loan will 
 paid off before 180 months. Write a function that takes the loan terms as input and prints the amortized schedule whereby an extra payment towards capital is applied each month. The monthly extra payment is also an input to the function. In the sample below, the borrower pays an extra $200 towards capital each month, shown in the rightmost column.
 
-- 4 -
 The output shows that after the first month of the 13th year, the balance falls below zero, which means the loan is paid off. It was paid off 35 months earlier and resulted in a saving of interest of $10,447. Your output should reproduce all the information shown in the sample. Below is the header of the function.
 
 ```void output_extra_monthy(double loan_amount, double interest_rate, double term_years, double extra);```
+
  ![AmortizationMonthly.png](AmortizationMonthly.png)
 
 - 5 -
@@ -70,19 +66,18 @@ The functions system(“cls”); or clrscr(); are useful for clearing the screen
 Case Studies (1 pt)
 Use your program to analyze the case studies below. 
 
-1) What difference does it make in the monthly payment and total interest if the loan duration is 15 years 
+1. What difference does it make in the monthly payment and total interest if the loan duration is 15 years 
 vs 30 years? (these are the two common durations for a house mortgage).
-2) Does it make a big difference if the interest rate changes from 3% to 4%? (check for 15-year and 30-
+2. Does it make a big difference if the interest rate changes from 3% to 4%? (check for 15-year and 30-
 year terms)
-3) Does it make a big difference in the monthly payment and total interest if the loan amount changes 
+3. Does it make a big difference in the monthly payment and total interest if the loan amount changes 
 from $150,000 to $160,000? (check for 15-year and 30-year terms)
-4) What difference to the total interest and total time do extra (monthly or yearly) payments do?
-5) How small does the interest become for car loans (eg: loan amount $15,000)?
+4. What difference to the total interest and total time do extra (monthly or yearly) payments do?
+5. How small does the interest become for car loans (eg: loan amount $15,000)?
 
 Assessing your Program’s Usefulness (1 pt)
 Demo your program to a friend or relative who doesn’t work in or study computing. Report whether they were able to use your program and whether they found it useful. Report if they recommended any new features. The goal is to assess whether your programming knowledge can be used to build a useful product.
 
-- 6 -
 Deliverables
 • Your code file(s) and executable.
 • Four sample output files (similar to those provided to you, but on a different loan)
@@ -93,11 +88,9 @@ Option #1: Copy/Paste in Windows
 This program produces a lot of output. It may be helpful to increase the window and buffer size to prevent the output from disappearing at the top of the window. To do so, click on the top left of the program window and select Properties. Then increase the window and buffer size (shown in the figures) so the buffer stores all the output and you’re able to scroll up to it.
 Restart the program and the changes should take effect.
 
-- 7 -
 In order to copy the windows content, click on the top left corner and navigate to Mark as shown in the figure. This allows you to select the windows content. Once the content is selected, simply right click on it which serves as Copy. Then paste the text in a different file. When you copy the output to an editor (e.g. Microsoft Word), if the numbers aren’t aligned anymore, 
 change the font to a fixed-width font such as Courier New.
 
-- 8 -
 Option #2: Print to a file directly
 See the attached sample code that prints to a file.
 Option #3: Redirect the output to a file
