@@ -43,16 +43,7 @@ shown below. Below is the header of the function and the output for our example 
 should print all the information shown and the numbers should be right aligned.
 void output_short_format(double loan_amount, double interest_rate, double 
 term_years);
----------------------------------
- LOAN TERMS
----------------------------------
-Loan Amount: 150000
-Interest Rate: 4.00%
-Term: 15 years
----------------------------------
-Monthly payment is: 1109.53
-Total interest is: 49715.74
-Total amount paid is: 199715.74
+ ![LoanTerms.png](LoanTerms.png)
 Output #2 (Amortized Schedule)
 The amortized schedule shows the amounts that go towards interest and principal for each month. Write a 
 function that takes the loan terms as parameters and prints the amortized schedule. The function header 
